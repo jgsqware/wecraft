@@ -60,19 +60,25 @@ Nginx - Node - Redis
    > docker network ls
    ```
 7. Back on swarm master
+
    ```bash
    > eval $(docker-machine env --swarm swarm-m)
    ``` 
 8. Create Redis Database on node 0
+
    ```bash
    > docker run -d --name=db --net=my-awesome-network --env="constraint:node==swarm-0" -p 6379:6379 redis
    ```
 9. Create Node Application on node 1
+
    ```bash
+   
    > docker run -d --name=app --net=my-awesome-network --env="constraint:node==swarm-1" -p 8080:8080 jgsqware/node-sample:wecraft-15-12-14
    ```
 10. Create Nginx Web Server on node 2
+
    ```bash
+   
    > docker run -d --name=web --net=my-awesome-network --env="constraint:node==swarm-2" -p 80:80 jgsqware/nginx-sample:wecraft-15-12-14
    ```
 
