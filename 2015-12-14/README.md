@@ -1,5 +1,5 @@
 # Context
-
+http://www.slideshare.net/jgsqware/whats-hot-docker-con-eu-2015-amp-whats-new-on-docker-19-56131242
 Nginx - Node - Redis
 
 # Networking
