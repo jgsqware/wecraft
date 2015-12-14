@@ -28,21 +28,21 @@ Nginx - Node - Redis
    ```bash
    > docker-machine create -d virtualbox \
     --swarm \
-    --swarm-discovery="consul://<keystore-ip>:8500" \
+    --swarm-discovery="consul://$(docker-machine ip keystore):8500" \
     --engine-opt="cluster-store=consul://$(docker-machine ip keystore):8500" \
     --engine-opt="cluster-advertise=eth1:2376" \
     swarm-0
    
    > docker-machine create -d virtualbox \
     --swarm \
-    --swarm-discovery="consul://<keystore-ip>:8500" \
+    --swarm-discovery="consul://$(docker-machine ip keystore):8500" \
     --engine-opt="cluster-store=consul://$(docker-machine ip keystore):8500" \
     --engine-opt="cluster-advertise=eth1:2376" \
     swarm-1
    
    > docker-machine create -d virtualbox \
     --swarm \
-    --swarm-discovery="consul://<keystore-ip>:8500" \
+    --swarm-discovery="consul://$(docker-machine ip keystore):8500" \
     --engine-opt="cluster-store=consul://$(docker-machine ip keystore):8500" \
     --engine-opt="cluster-advertise=eth1:2376" \
     swarm-2
