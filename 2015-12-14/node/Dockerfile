@@ -7,10 +7,13 @@ MAINTAINER Julien Garcia Gonzaelz
 # Install nodemon
 RUN npm install -g nodemon
 
-# Define working directory
 WORKDIR /src
-ADD . /src
+
+ADD package.json /src/package.json
+# Define working directory
 RUN npm install
+ADD . /src
+
 
 # Expose port
 EXPOSE  8080
