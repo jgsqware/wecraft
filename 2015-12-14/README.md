@@ -2,6 +2,8 @@
 http://www.slideshare.net/jgsqware/whats-hot-docker-con-eu-2015-amp-whats-new-on-docker-19-56131242
 Nginx - Node - Redis
 
+**Note:** For the "User Name Space" demo, see the [User Name Space demo]("User Name Space demo.md") script located in the `userns_demo` directory.
+
 # Networking
 
 1. Create Key-Value store for Service Discover, Networks, IPs, ...
