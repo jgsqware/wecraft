@@ -3,7 +3,7 @@ Purpose demonstrate that files owned by root on the host can't be modified anymo
 The demontration is done by mapping the host/etc directory as container/data directory and modifying (or trying to modify) the hosts file.
 
 ## Demo setup
-* move to work directory `/Users/jmm/work/usrnamespace_demo` and start Vagrant with `vagrant up` 
+* move to work directory `userns_demo` and start Vagrant with `vagrant up` 
 * install the experimental package with `curl -sSL https://experimental.docker.com/ | sh`
 
 ## Demo 
